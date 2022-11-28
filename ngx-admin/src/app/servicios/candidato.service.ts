@@ -16,4 +16,18 @@ export class CandidatoService {
   eliminar(id: string) {
     return this.http.delete<Candidato>(`${environment.url_gateway}/candidatos/${id}`,);
   }
+  
+  getCandidato(id: string): Observable<Candidato> {
+    return this.http.get<Candidato>(`${environment.url_gateway}/candidatos/${id}`);
+  
+  }
+  crear(elCandidato: Candidato) {
+    return this.http.post(`${environment.url_gateway}/candidatos`,elCandidato);
+  
+  }
+
+  editar(id:string,elCandidato: Candidato) {
+    return this.http.put(`${environment.url_gateway}/candidatos/${id}`,elCandidato);
+
+  }
 }

@@ -8,8 +8,7 @@
         </nb-card-header>
         <table class="table">
             <tr>
-                <th *ngFor="let columaActual of
-    nombresColumnas">{{columaActual}}</th>
+                <th *ngFor="let columaActual of nombresColumnas">{{columaActual}}</th>
             </tr>
             <ng-container *ngFor="let candidatoActual of candidatos">
                 <tr>
@@ -17,6 +16,7 @@
                     <td>{{candidatoActual.nombre}}</td>
                     <td>{{candidatoActual.apellido}} </td>
                     <td>{{candidatoActual.numero_resolucion}} </td>
+                    <td>{{candidatoActual.opciones}} </td>
                     <td>
                         <button type="button" class="btn btn-primary" (click)="editar(candidatoActual._id)">
                             <i class="fas fa-pencil-alt"></i>
